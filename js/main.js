@@ -31,11 +31,12 @@
             
             var dist = await distance(ciccio.lat, ciccio.lng,lat,lng)
             var distanzaDalPortone = await distance(portone.lat, portone.lng,lat,lng)
+            var dm = distanzaDalPortone * 1000
 
             document.querySelector('#result-distance').textContent = '  ' + dist * 1000 + ' metri';
             document.querySelector('#portone-distance').textContent = '  ' + distanzaDalPortone * 1000 + ' metri';
 
-            if (distanzaDalPortone < 70){
+            if (dm < 70){
                // window.open('tel:3922729329')
                 document.querySelector('#cancello').textContent = ' APRI IL CANCELLO!!!!';
             }
