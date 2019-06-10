@@ -36,7 +36,7 @@
             document.querySelector('#portone-distance').textContent = '  ' + distanzaDalPortone * 1000 + ' metri';
 
             if (distanzaDalPortone < 70){
-                window.open('tel:3922729329')
+               // window.open('tel:3922729329')
                 document.querySelector('#cancello').textContent = ' APRI IL CANCELLO!!!!';
             }
         
